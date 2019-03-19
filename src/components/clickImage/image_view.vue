@@ -10,7 +10,7 @@
                         <div class="mt-4" v-show="!isHide">
                             <video ref="video" class="w-100" id="video" width="640" height="480" autoplay></video>
                         </div>
-                        <img v-show="isHide" ref="image" class="mt-4" :src="captures"/>
+                        <img v-show="isHide" ref="image" class="mt-4 w-100" :src="captures"/>
                         <img class="hide-img" id="hide-img" src="../../assets/pixelated.jpg">
                         <canvas ref="canvas" id="canvas" width="640" height="480"></canvas>
                         <div>
