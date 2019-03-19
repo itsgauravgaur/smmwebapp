@@ -154,7 +154,8 @@
                 })
                     .catch((error) => {
                         console.log('Request failed', error);
-                         this.message= 'Unable to detect facial recognition, Please retake image to blur the eyes';
+                         this.message= 'This request has been blocked; the content must be served over HTTPS';
+                         this.buttonText = "Done";
                           this.$refs.topProgress.done();
                           this.$refs.myModalRef.show();
                     });
