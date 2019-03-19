@@ -156,6 +156,7 @@
                         console.log('Request failed', error);
                          this.message= 'This request has been blocked; the content must be served over HTTPS';
                          this.buttonText = "Done";
+                          this.overlay = 'remove-overlay';
                           this.$refs.topProgress.done();
                           this.$refs.myModalRef.show();
                     });
