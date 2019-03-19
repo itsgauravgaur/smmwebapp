@@ -154,6 +154,9 @@
                 })
                     .catch((error) => {
                         console.log('Request failed', error);
+                         this.message= 'Unable to detect facial recognition, Please retake image to blur the eyes';
+                          this.$refs.topProgress.done();
+                          this.$refs.myModalRef.show();
                     });
             },
 
@@ -237,10 +240,10 @@
                 } else {
                     this.$refs.topProgress.done();
                     this.overlay = 'remove-overlay';
+                    this.message= 'Unable to detect facial recognition, Please retake image to blur the eyes';
                     this.$refs.myModalRef.show();
                     this.isHide = false;
                     this.buttonText = "Retake";
-                    this.message= 'Unable to detect facial recognition, Please retake image to blur the eyes';
                 }
             },
 
