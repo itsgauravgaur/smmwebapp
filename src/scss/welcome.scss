@@ -1,0 +1,26 @@
+.page-welcome {
+  .logo-image {
+    text-align: center;
+    padding-top: 30px;
+    img {
+      width: 50%;
+    }
+  }
+  .footer{
+    height: 141px;
+    padding-bottom: 25px;
+    .logo-text {
+      font-size: 17px;
+      font-weight: 400;
+      text-shadow: 1px 1px 19px rgba(0, 0, 0, 1);
+      letter-spacing: 1.3px;
+    }
+    .round-button{
+      margin-top: 35px;
+      a{
+        font-size: 26px;
+        padding: 22px 20px;
+      }
+    }
+  }
+}

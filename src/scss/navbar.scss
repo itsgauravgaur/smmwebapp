@@ -1,0 +1,107 @@
+.vue-popover {
+  width: 215px !important;
+  right: 14px !important;
+  top: 47px !important;
+  height: 100px;
+  left: auto !important;
+  padding: 0 !important;
+  &.dropdown-position-bottom:before {
+    left: 174px !important;
+    @media (min-width: 768px) {
+      left: 153px !important;
+    }
+    @media (min-width: 992px) {
+      left: 148px !important;
+    }
+    @media (min-width: 1200px) {
+      left: 140px !important;
+    }
+  }
+}
+
+nav {
+  background-color: #148ca8;
+  color: #ffffff;
+  padding: 15px 0;
+  .nav-container {
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  &.welcome, &.complete {
+    button {
+      &.back-button {
+        visibility: hidden;
+      }
+    }
+  }
+  .popover {
+    position: relative;
+    background-color: transparent;
+    background-clip: unset;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    &.back-button {
+      width: 56px;
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    &.popover-btn {
+      position: relative;
+      &:before {
+        position: absolute;
+        content: ' \2026';
+        top: -26px;
+        left: -25px;
+        font-size: 26px;
+      }
+    }
+  }
+  .page-title {
+    font-size: 23px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+}
+
+
+/********************scss only for firefox browser*************************/
+
+@-moz-document url-prefix() {
+  button.popover-btn {
+    height: 20px;
+    &:before {
+      position: absolute;
+      content: ' \2026';
+      top: -26px !important;
+      left: 0 !important;
+      font-size: 26px;
+    }
+  }
+}
+
+@supports (-moz-appearance:none) {
+  .vue-popover {
+    &.dropdown-position-bottom:before {
+      left: 192px !important;
+      @media (min-width: 768px) {
+        left: 184px !important;
+      }
+      @media (min-width: 992px) {
+        left: 171px !important;
+      }
+      @media (min-width: 1200px) {
+        left: 161px !important;
+      }
+    }
+  }
+}

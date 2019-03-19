@@ -1,0 +1,32 @@
+{
+  "name": "smmwebapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "serve -n dist",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && now --public && now alias"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.13",
+    "vue": "^2.6.6",
+    "vue-js-popover": "^1.1.8",
+    "vue-loaders": "^2.0.0",
+    "vue-router": "^3.0.2",
+    "vue-select": "^2.5.1",
+    "vue-top-progress": "^0.7.0",
+    "vuelidate": "^0.7.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.21"
+  }
+}
