@@ -49,9 +49,6 @@
     import {saveData} from "../provider/savedataMixin";
     import {endPoints} from "../api/endpoints";
 
-    let url = "http://ec2-18-222-211-254.us-east-2.compute.amazonaws.com/smmmobilebackend/";
-    // let url = "http://local.smm:8082/smmmobilebackend/";
-
     export default {
         name: "order",
         components: {
@@ -98,7 +95,7 @@
                     'Content-Type': 'application/json'
                 };
 
-                await fetch(url + endPoints.saveData, {
+                await fetch(endPoints.baseUrl + endPoints.saveData, {
                     method: 'post',
                     headers: axiosConfig,
                     body: JSON.stringify(data)
