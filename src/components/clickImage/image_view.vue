@@ -188,39 +188,39 @@
                         if (this.side === "front") {
                             if (eye_cords[key].left_eye.width > 0) {
                                 x = eye_cords[key].left_eye.left_of_left_eyebrow.x;
-                                y = eye_cords[key].left_eye.right_of_left_eyebrow.y;
+                                y = (eye_cords[key].left_eye.right_of_left_eyebrow.y - 15);
                                 width = (eye_cords[key].right_eye.right_of_right_eyebrow.x - eye_cords[key].left_eye.left_of_left_eyebrow.x);
                                 height = eye_cords[key].left_eye.width;
-                                this.drawBlurImage(contextImg, x, y, width, height);
+                                this.drawBlurImage(context, x, y, width, height);
                             }
                             if (eye_cords[key].nose.width_left > 0) {
-                                x = eye_cords[key].mouth.mouth_center.x;
-                                y = (eye_cords[key].between_eye.y + (eye_cords[key].left_eye.width / 2));
-                                width = (eye_cords[key].mouth.width_right);
+                                x = (eye_cords[key].mouth.mouth_center.x + 10);
+                                y = ((eye_cords[key].between_eye.y + (eye_cords[key].left_eye.width / 2)) - 10);
+                                width = ((eye_cords[key].mouth.width_right + 15)) ;
                                 height = ((eye_cords[key].mouth.mouth_center.y - eye_cords[key].between_eye.y));
-                                this.drawBlurImage(contextImg, x, y, width, height);
+                                this.drawBlurImage(context, x, y, width, height);
                             }
                             if (eye_cords[key].nose.width_left > 0) {
-                                x = (eye_cords[key].mouth.mouth_center.x - eye_cords[key].mouth.width_right);
-                                y = (eye_cords[key].between_eye.y + (eye_cords[key].left_eye.width / 2));
-                                width = (eye_cords[key].mouth.width_right);
+                                x = ((eye_cords[key].mouth.mouth_center.x - eye_cords[key].mouth.width_right) - 10);
+                                y = ((eye_cords[key].between_eye.y + (eye_cords[key].left_eye.width / 2)) - 10);
+                                width = ((eye_cords[key].mouth.width_right + 20));
                                 height = ((eye_cords[key].mouth.mouth_center.y - eye_cords[key].between_eye.y));
-                                this.drawBlurImage(contextImg, x, y, width, height);
+                                this.drawBlurImage(context, x, y, width, height);
                             }
                         } else {
                             if (eye_cords[key].left_eye.width > 0) {
                                 x = eye_cords[key].left_eye.left_of_left_eyebrow.x;
-                                y = eye_cords[key].left_eye.right_of_left_eyebrow.y;
+                                y = (eye_cords[key].left_eye.right_of_left_eyebrow.y - 30);
                                 width = (eye_cords[key].nose.nose_tip.x - eye_cords[key].left_eye.left_of_left_eyebrow.x);
-                                height = ((eye_cords[key].mouth.mouth_center.y - eye_cords[key].left_eye.right_of_left_eyebrow.y) + 10);
-                                this.drawBlurImage(contextImg, x, y, width, height);
+                                height = ((eye_cords[key].mouth.mouth_center.y - eye_cords[key].left_eye.right_of_left_eyebrow.y) + 70);
+                                this.drawBlurImage(context, x, y, width, height);
                             }
                             if (eye_cords[key].right_eye.width > 0) {
                                 x = ((eye_cords[key].right_eye.left_of_right_eyebrow.x - (eye_cords[key].nose.nose_tip.x - eye_cords[key].right_eye.right_of_right_eyebrow.x)) - 20);
-                                y = eye_cords[key].right_eye.right_of_right_eyebrow.y;
+                                y = (eye_cords[key].right_eye.right_of_right_eyebrow.y - 30) ;
                                 width = (eye_cords[key].nose.nose_tip.x - eye_cords[key].right_eye.right_of_right_eyebrow.x);
-                                height = ((eye_cords[key].mouth.mouth_center.y - eye_cords[key].right_eye.right_of_right_eyebrow.y) + 10);
-                                this.drawBlurImage(contextImg, x, y, width, height);
+                                height = ((eye_cords[key].mouth.mouth_center.y - eye_cords[key].right_eye.right_of_right_eyebrow.y) + 70);
+                                this.drawBlurImage(context, x, y, width, height);
                             }
                         }
                     }
